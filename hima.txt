@@ -1,0 +1,56 @@
+/*
+Name:shirish
+date:31/03/2026
+assignment:check if number is perfect or not
+*/
+#include<stdio.h>
+int main()
+{
+    int GP,AP,A,R,N,a,b,c;
+    float HP;
+    // the  value of the A,R,N are entered
+    printf("Enter the First Number 'A':");
+    scanf(" %d",&A);
+    
+    printf("EEnter the Common Difference / Ratio 'R':");
+    scanf(" %d",&R);
+     printf("Enter the number of terms 'N':  ");
+    scanf(" %d",&N);
+    //if condition check wether the  A,R,N are positive or negative 
+    if(A<=0||R<=0||N<=0)
+    {
+        printf("invalid input");
+        
+    }
+    else
+    {
+        AP=A;
+        printf("AP=");
+        for(a=0;a<N;++a)
+        {
+            printf("%d ",AP);
+            AP=AP+R; //this statement give the value with the AR value till the N value 
+            
+        }
+        GP=A;
+        printf("\nGP=");
+        for(b=0;b<N;++b)
+        {
+            printf("%d ",GP);
+            GP=GP*R;// this statement 
+           
+            
+        }
+        
+    
+   AP=A;
+        printf("\nHP=");
+        for(a=0;a<N;++a)
+        {
+            HP = 1.0 / AP;
+            printf("%f ",HP);
+           AP = AP + R;
+        }
+    }
+    return 0;
+    }
